@@ -1,0 +1,1 @@
+enum BetType { info, matches, team, transfers, media}
