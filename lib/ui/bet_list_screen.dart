@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:football_betting_flutter/state/bet_state.dart';
 import 'package:football_betting_flutter/ui/extension/app_extension.dart';
+import 'package:football_betting_flutter/ui/tab_bar_view/info_tab_page.dart';
 import '../../ui_kit/_ui_kit.dart';
 import 'package:football_betting_flutter/ui_kit/app_assets.dart';
 import '../data/app_data.dart';
@@ -24,7 +25,6 @@ class BetListState extends State<BetList> {
     setState(() {});
   }
 
-  bool isDarkTheme = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,17 +62,11 @@ class BetListState extends State<BetList> {
                   ],
                 ),
                 const Padding(padding: EdgeInsets.all(6.0)),
-                Theme(
-                  data: isDarkTheme ? AppTheme.darkTheme : AppTheme.lightTheme,
-                  child: const DefaultTabController(
-                    length: 5,
-                    child: TabBar(
-                      // unselectedLabelColor: Colors.grey,
-                      //   indicator: BoxDecoration(
-                      //       borderRadius: BorderRadius.all(
-                      //         Radius.circular(20),
-                      //       ),
-                      //   ),
+                const DefaultTabController(
+                  length: 5,
+                  child: Column(
+                  children: [
+                    TabBar(
                       isScrollable: true,
                       tabs: <Widget>[
                         Tab(text: "Info"),
@@ -82,6 +76,21 @@ class BetListState extends State<BetList> {
                         Tab(text: "Media"),
                       ],
                     ),
+                    TabBarView(
+                      children: [
+                        Icon(Icons.heart_broken),
+                        Icon(Icons.heart_broken),
+                        Icon(Icons.heart_broken),
+                        Icon(Icons.heart_broken),
+                        Icon(Icons.heart_broken),
+                      // InfoTabPage(),
+                      //   InfoTabPage(),
+                      //   InfoTabPage(),
+                      //   InfoTabPage(),
+                      //   InfoTabPage(),
+                    ],
+                    ),
+                  ],
                   ),
                 ),
                 // _categories(),

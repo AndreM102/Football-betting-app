@@ -8,14 +8,14 @@ class AppTheme {
     tabBarTheme: TabBarTheme(
       labelColor: Colors.white,
       unselectedLabelColor: Colors.grey,
-      indicatorColor: LightThemeColor.red,
+      // indicatorColor: LightThemeColor.red,
       indicator: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: LightThemeColor.red,
       ),
     ),
     scaffoldBackgroundColor: LightThemeColor.primaryLight,
-    indicatorColor: LightThemeColor.red,
+    // indicatorColor: LightThemeColor.red,
     textTheme: TextTheme(
       displayLarge: AppTextStyle.h1Style,
       displayMedium: AppTextStyle.h2Style,
@@ -31,14 +31,14 @@ class AppTheme {
     tabBarTheme: TabBarTheme(
       labelColor: Colors.black,
       unselectedLabelColor: Colors.grey,
-      indicatorColor: LightThemeColor.yellow,
+      // indicatorColor: LightThemeColor.yellow,
       indicator: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: LightThemeColor.yellow,
       ),
     ),
       scaffoldBackgroundColor: DarkThemeColor.primaryDark,
-      indicatorColor: LightThemeColor.yellow,
+      // indicatorColor: LightThemeColor.yellow,
     textTheme: TextTheme(
       displayLarge: AppTextStyle.h1Style.copyWith(color: Colors.white),
       displayMedium: AppTextStyle.h2Style.copyWith(color: Colors.white),
