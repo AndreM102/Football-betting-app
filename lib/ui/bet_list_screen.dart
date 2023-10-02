@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:football_betting_flutter/state/bet_state.dart';
 import 'package:football_betting_flutter/ui/extension/app_extension.dart';
 import '../../ui_kit/_ui_kit.dart';
 import 'package:football_betting_flutter/ui_kit/app_assets.dart';
@@ -14,6 +15,8 @@ class BetList extends StatefulWidget {
 class BetListState extends State<BetList> {
   var categories = AppData.categories;
 
+  get isLight => BetState().isLight;
+
   void onCategoryTap(int selectedIndex) {
     categories.asMap().forEach((index, category) {
       category.isSelected = index == selectedIndex;
@@ -21,88 +24,117 @@ class BetListState extends State<BetList> {
     setState(() {});
   }
 
+  bool isDarkTheme = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-              icon: const Icon(Icons.arrow_back),
-              color: Colors.black,
-              onPressed: () {},
-            );
-          },
-        ),
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-      ),
-      body: Column(
+      body: Stack(
         children: [
-          Align(
-            alignment: Alignment.topCenter,
-            child: Image.asset("assets/images/manchester2.png"),
+          Image.asset(
+            "assets/images/bg.png",
+            fit: BoxFit.cover,
+            width: MediaQuery.of(context).size.width,
           ),
-          // const Padding(padding: EdgeInsets.all(3.0)),
-          Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          SafeArea(
+            child: IconButton(
+              onPressed: () {
+                BetState().isLight.value =
+                !BetState().isLight.value;
+              },
+              icon: const Icon(
+                Icons.wb_sunny_outlined,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          SafeArea(
+            child: Column(
               children: [
-                Text("MANCHESTER CITY", style: AppTextStyle.h1Style),
-              ]
-          ),
-          const Padding(padding: EdgeInsets.all(6.0)),
-          _categories(),
-        ],
-      ),
-      // body: Container(
-      //   decoration: const BoxDecoration(
-      //     image: DecorationImage(
-      //       image: AssetImage('assets/images/bg.png'),
-      //       fit: BoxFit.contain,
-      //     ),
-      //   ),
-      //   child: const Align(
-      //     alignment: Alignment.topCenter,
-      //     child: Center(),
-      //   ),
-      // ),
-    );
-  }
-
-  Widget _categories(){
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: SizedBox(
-        height: 40,
-        child: ListView.separated(
-          scrollDirection: Axis.horizontal,
-            itemBuilder: (_, index) {
-              final category = categories[index];
-              return GestureDetector(
-                  onTap: () {
-                    onCategoryTap(index);
-                  },
-              child: Container(
-                width: 100,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: category.isSelected ? LightThemeColor.red : Colors.transparent,
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(15),
+                Container(height: 100.0),
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: Image.asset("assets/images/manchester2.png"),
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("MANCHESTER CITY", style: Theme.of(context).textTheme.displayLarge),
+                  ],
+                ),
+                const Padding(padding: EdgeInsets.all(6.0)),
+                Theme(
+                  data: isDarkTheme ? AppTheme.darkTheme : AppTheme.lightTheme,
+                  child: const DefaultTabController(
+                    length: 5,
+                    child: TabBar(
+                      // unselectedLabelColor: Colors.grey,
+                      //   indicator: BoxDecoration(
+                      //       borderRadius: BorderRadius.all(
+                      //         Radius.circular(20),
+                      //       ),
+                      //   ),
+                      isScrollable: true,
+                      tabs: <Widget>[
+                        Tab(text: "Info"),
+                        Tab(text: "Matches"),
+                        Tab(text: "Team"),
+                        Tab(text: "Transfer"),
+                        Tab(text: "Media"),
+                      ],
+                    ),
                   ),
                 ),
-                child: Text(category.type.name.toCapital),
-              ),
-              );
-            },
-            separatorBuilder: (_, __) => Container(
-              width: 15,
-              height: 30,
+                // _categories(),
+                const Divider(height: 30, color: Colors.grey),
+              ],
             ),
-            itemCount: categories.length,
-        ),
+          ),
+        ],
       ),
     );
   }
 
+//   Widget _categories() {
+//     return Padding(
+//       padding: const EdgeInsets.all(8.0),
+//       child: SizedBox(
+//         height: 40,
+//         child: ListView.separated(
+//           scrollDirection: Axis.horizontal,
+//           itemBuilder: (_, index) {
+//             final category = categories[index];
+//             return GestureDetector(
+//               onTap: () {
+//                 onCategoryTap(index);
+//               },
+//               child: Container(
+//                 width: 100,
+//                 alignment: Alignment.center,
+//                 decoration: BoxDecoration(
+//                     color: category.isSelected ? LightThemeColor.red : Colors.transparent,
+//                   // color: category.isSelected ? ThemeData().indicatorColor : Colors.transparent,
+//                   borderRadius: const BorderRadius.all(
+//                     Radius.circular(15),
+//                   ),
+//                 ),
+//                 child: Text(
+//                   category.type.name.toCapital,
+//                   style: TextStyle(
+//                     color: category.isSelected ? Colors.white : Colors.grey,
+//                     fontWeight: FontWeight.bold,
+//                   ),
+//                 ),
+//               ),
+//             );
+//           },
+//           separatorBuilder: (_, __) => Container(
+//             width: 15,
+//             height: 30,
+//           ),
+//           itemCount: categories.length,
+//         ),
+//       ),
+//     );
+//   }
+// }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:football_betting_flutter/state/bet_state.dart';
 import 'package:football_betting_flutter/ui/bet_list_screen.dart';
 import 'package:football_betting_flutter/ui_kit/_ui_kit.dart';
 
@@ -12,10 +13,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Football Betting',
-      theme: AppTheme.lightTheme,
-      home: const BetList(),
+    return ValueListenableBuilder(
+        valueListenable: BetState().isLight,
+    builder: (_, isLight, __) {
+      return MaterialApp(
+        title: 'Football Betting',
+        theme: isLight
+            ? AppTheme.lightTheme
+            : AppTheme.darkTheme,
+        home: const BetList(),
+      );
+    },
     );
   }
 }
