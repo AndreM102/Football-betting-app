@@ -14,4 +14,9 @@ class AppData {
     BetCategory(BetType.transfers, false),
     BetCategory(BetType.media, false),
   ];
+
+  static List<MatchesCategory> cat = [
+    MatchesCategory(MatchesType.results, true),
+    MatchesCategory(MatchesType.features, false),
+  ];
 }

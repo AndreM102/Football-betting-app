@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:football_betting_flutter/state/bet_state.dart';
-import 'package:football_betting_flutter/ui/bet_list_screen.dart';
+import 'package:football_betting_flutter/ui/screen/bet_list_screen.dart';
 import 'package:football_betting_flutter/ui_kit/_ui_kit.dart';
 
 

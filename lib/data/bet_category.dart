@@ -6,3 +6,10 @@ class BetCategory {
 
   BetCategory(this.type, this.isSelected);
 }
+
+class MatchesCategory {
+  final MatchesType type;
+  bool isSelected;
+
+  MatchesCategory(this.type, this.isSelected);
+}

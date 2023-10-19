@@ -27,7 +27,7 @@ class AppTextStyle {
   static TextStyle h4StyleLight = const TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.w500,
-    color: Colors.black,
+    color: Color(0xFF808697),
   );
 
   static TextStyle h5StyleLight = const TextStyle(
