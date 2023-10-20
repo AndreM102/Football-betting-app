@@ -34,7 +34,6 @@ class MatchesTabPage extends StatelessWidget {
               ),
             ),
             Expanded(
-              // flex: 1,
               child: TabBarView(
                 children: [
                   SingleChildScrollView(child: _tabsResults(context)),

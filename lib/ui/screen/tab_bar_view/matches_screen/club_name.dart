@@ -15,12 +15,12 @@ class GameClub extends StatelessWidget {
       required this.isFavorite});
 
   bool isResult;
-  String teamUp = "Club name";
-  String teamDown = "Club name";
-  int? scoreUp = 0;
+  String teamUp;
+  String teamDown;
+  int? scoreUp;
   int? scoreDown;
   DateTime date;
-  bool isFavorite = true;
+  bool isFavorite;
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +89,8 @@ class GameClub extends StatelessWidget {
                 width: 24,
                 height: 24,
                 child: Icon(
-                  AppIcon.outlinedHeart,
+                  Icons.favorite_border,
+                  // AppIcon.outlinedHeart,
                   color: Colors.grey,
                   size: 16,
                 ),

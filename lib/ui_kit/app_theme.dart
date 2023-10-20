@@ -42,7 +42,7 @@ class AppTheme {
       displayMedium: AppTextStyle.h2Style.copyWith(color: Colors.white),
       displaySmall: AppTextStyle.h3Style.copyWith(color: Colors.white),
       headlineMedium: AppTextStyle.h4StyleLight.copyWith(color: Colors.white),
-      headlineSmall: AppTextStyle.h5StyleLight.copyWith(color: Colors.white),
+      headlineSmall: AppTextStyle.h5StyleLight.copyWith(color: Color(0xFF808697),),
       bodyLarge: AppTextStyle.bodyTextLight.copyWith(color: Colors.white),
       titleMedium: AppTextStyle.subtitleLight.copyWith(color: Colors.black),
     ),

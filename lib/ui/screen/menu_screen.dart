@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:football_betting_flutter/ui/screen/tab_bar_view/info_tab_page.dart';
 import 'package:football_betting_flutter/ui/screen/tab_bar_view/matches_screen/matches_tab_page.dart';
+import 'package:football_betting_flutter/ui/screen/tab_bar_view/team_tab_page.dart';
 
 class MenuPage extends StatelessWidget {
   const MenuPage({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class MenuPage extends StatelessWidget {
                 children: [
                   InfoTabPage(),
                   MatchesTabPage(),
-                  Icon(Icons.heart_broken),
+                  TeamTabPage(),
                   Icon(Icons.heart_broken),
                   Icon(Icons.heart_broken),
                 ],

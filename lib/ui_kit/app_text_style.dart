@@ -25,15 +25,17 @@ class AppTextStyle {
   );
 
   static TextStyle h4StyleLight = const TextStyle(
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: FontWeight.w500,
-    color: Color(0xFF808697),
+    color: Colors.black,
+    fontFamily: "Inter",
   );
 
   static TextStyle h5StyleLight = const TextStyle(
-    fontSize: 17,
+    fontSize: 12,
     fontWeight: FontWeight.w400,
-    color: Colors.black87,
+    color: Color(0xFF808697),
+    fontFamily: "Inter",
   );
 
   static TextStyle bodyTextLight = const TextStyle(
