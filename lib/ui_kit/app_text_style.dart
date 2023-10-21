@@ -39,9 +39,10 @@ class AppTextStyle {
   );
 
   static TextStyle bodyTextLight = const TextStyle(
-    fontSize: 14,
+    fontSize: 18,
     fontWeight: FontWeight.w600,
-    color: Colors.grey,
+    color: Colors.black,
+    fontFamily: "Inter",
   );
 
   static TextStyle subtitleLight = const TextStyle(
