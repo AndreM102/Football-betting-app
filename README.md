@@ -2,12 +2,12 @@
 
 #### Светлая тема
 <p align="center">
-  <img width="700" height="450" src="assets/images/light.png">
+  <img width="700" height="400" src="assets/images/light.png">
 </p>
 
 #### Темная тема
 <p align="center">
-  <img width="700" height="450" src="assets/images/dark.png">
+  <img width="700" height="400" src="assets/images/dark.png">
 </p>
 
 
