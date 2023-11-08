@@ -2,22 +2,13 @@
 
 #### Светлая тема
 <p align="center">
-  <img width="500" height="250" src="assets/images/light.png">
+  <img width="700" height="450" src="assets/images/light.png">
 </p>
 
 #### Темная тема
 <p align="center">
-  <img width="450" height="150" src="assets/images/dark.png">
+  <img width="700" height="450" src="assets/images/dark.png">
 </p>
-
-
-[//]: # (![Светлая тема]&#40;assets/images/light2.png&#41;)
-
-[//]: # (![Светлая тема]&#40;assets/images/light3.png&#41;)
-
-[//]: # (![Светлая тема]&#40;assets/images/light4.png&#41;)
-
-[//]: # (![Светлая тема]&#40;assets/images/light5.png&#41;)
 
 
 # football_betting_flutter
