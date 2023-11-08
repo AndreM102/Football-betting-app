@@ -2,7 +2,7 @@
 
 #### Светлая тема
 <p align="center">
-  <img width="450" height="150" src="assets/images/light.png">
+  <img width="450" height="300" src="assets/images/light.png">
 </p>
 
 #### Темная тема
