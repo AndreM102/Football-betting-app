@@ -1,11 +1,18 @@
-# Мобильное приложение для футбольных ставок
+## Мобильное приложение для футбольных ставок
 
-Светлая тема
-![Светлая тема](assets/images/light1.png)
-![Светлая тема](assets/images/light2.png)
-![Светлая тема](assets/images/light3.png)
-![Светлая тема](assets/images/light4.png)
-![Светлая тема](assets/images/light5.png)
+#### Светлая тема
+
+<p align="center">
+  <img width="250" height="400" src="assets/images/light2.png">
+</p>
+
+[//]: # (![Светлая тема]&#40;assets/images/light2.png&#41;)
+
+[//]: # (![Светлая тема]&#40;assets/images/light3.png&#41;)
+
+[//]: # (![Светлая тема]&#40;assets/images/light4.png&#41;)
+
+[//]: # (![Светлая тема]&#40;assets/images/light5.png&#41;)
 
 
 # football_betting_flutter
