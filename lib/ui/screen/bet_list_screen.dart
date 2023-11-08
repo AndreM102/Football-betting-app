@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:football_betting_flutter/state/bet_state.dart';
-
+import 'package:flutter/foundation.dart' as Foundation;
 import 'package:football_betting_flutter/ui/screen/menu_screen.dart';
 import '../../data/app_data.dart';
 
@@ -12,19 +12,14 @@ class BetList extends StatefulWidget {
 }
 
 class BetListState extends State<BetList> {
-  var categories = AppData.categories;
-
   get isLight => BetState().isLight;
 
-  void onCategoryTap(int selectedIndex) {
-    categories.asMap().forEach((index, category) {
-      category.isSelected = index == selectedIndex;
-    });
-    setState(() {});
-  }
 
+  // String city = "MANCHESTER CITY" + (Foundation.kReleaseMode ? " release" : " debug");
+  String city = "MANCHESTER CITY";
   @override
   Widget build(BuildContext context) {
+    Brightness brightness = Theme.of(context).brightness;
     return Scaffold(
       body: Stack(
         children: [
@@ -39,8 +34,11 @@ class BetListState extends State<BetList> {
                 BetState().isLight.value =
                 !BetState().isLight.value;
               },
-              icon: const Icon(
+              icon: brightness == Brightness.light ? const Icon(
                 Icons.wb_sunny_outlined,
+                color: Colors.white,
+              ) : const Icon(
+                Icons.brightness_3,
                 color: Colors.white,
               ),
             ),
@@ -56,7 +54,8 @@ class BetListState extends State<BetList> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("MANCHESTER CITY", style: Theme.of(context).textTheme.displayLarge),
+                    Text(
+              city, style: Theme.of(context).textTheme.displayLarge),
                   ],
                 ),
                 const Padding(padding: EdgeInsets.all(6.0)),
