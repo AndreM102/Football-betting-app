@@ -1,15 +1,15 @@
 ## Мобильное приложение для футбольных ставок
 
 #### Светлая тема
-<div>
 <p align="center">
-  <img width="250" height="550" src="assets/images/light1.png">
+  <img width="450" height="150" src="assets/images/light.png">
 </p>
 
+#### Темная тема
 <p align="center">
-  <img width="250" height="550" src="assets/images/light2.png">
+  <img width="450" height="150" src="assets/images/dark.png">
 </p>
-</div>>
+
 
 [//]: # (![Светлая тема]&#40;assets/images/light2.png&#41;)
 
